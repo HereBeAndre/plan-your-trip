@@ -1,5 +1,7 @@
+import "./index.scss";
+
 export const Footer = () => (
-  <div className="footer">
+  <footer className="footer-container">
     <p>© 2014-2021 Tiqets Amsterdam</p>
-  </div>
+  </footer>
 );

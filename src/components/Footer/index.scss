@@ -1,0 +1,17 @@
+.footer-container {
+  flex-shrink: 0;
+  width: 100%;
+  background: red;
+  text-align: center;
+  align-content: flex-end;
+  height: 68px;
+  padding-bottom: 12px; // Harcoded - couldn't verify based on the design
+
+  // Hide by default
+  display: none;
+
+  // Show only on wider screens
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
