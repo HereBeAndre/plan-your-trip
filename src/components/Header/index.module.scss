@@ -1,7 +1,10 @@
+@use "../../styles/variables" as vars;
+
 .headerContainer {
   width: 100%;
   text-align: center;
   align-content: center;
   height: 22vh;
-  background: blue;
+  background: vars.$purple-header;
+  color: vars.$main-white;
 }

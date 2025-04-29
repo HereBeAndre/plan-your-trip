@@ -1,7 +1,10 @@
+@use "../../styles/variables" as vars;
+
 .footerContainer {
   flex-shrink: 0;
   width: 100%;
-  background: red;
+  background: vars.$bg-footer;
+  color: vars.$main-white;
   text-align: center;
   align-content: flex-end;
   height: 68px;
