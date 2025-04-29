@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 
-import "./index.scss";
+import styles from "./index.module.scss";
 
 type LayoutProps = {
   children: ReactNode;
@@ -11,9 +11,9 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="layout-container">
+    <div className={styles.layoutContainer}>
       <Header />
-      <main className="layout-content">{children}</main>
+      <main className={styles.layoutContent}>{children}</main>
       <Footer />
     </div>
   );

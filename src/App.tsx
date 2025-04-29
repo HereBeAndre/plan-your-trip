@@ -3,7 +3,7 @@ import { Results } from "./components/Results";
 
 import { Layout } from "./shared/Layout";
 
-import "./App.scss";
+// import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   return (

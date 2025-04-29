@@ -1,7 +1,7 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 export const Header = () => (
-  <header className="header-container">
+  <header className={styles.headerContainer}>
     <h1>Plan Your Trip!</h1>
   </header>
 );
