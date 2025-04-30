@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 export interface Option {
   value: string | number;
   label: string;
@@ -20,14 +21,21 @@ export const Select = ({
   isDisabled,
   value,
 }: SelectProps) => (
-  <div>
-    <label htmlFor="select">{name}</label>
+  <div className={styles.selectWrapper}>
+    <label
+      htmlFor={`${name}-select`}
+      //   TODO: Not ideal, should use a className library
+      className={isDisabled ? styles.disabled : ""}
+    >
+      {name}
+    </label>
     <select
       name={name}
       id={`${name}-select`}
       disabled={isDisabled}
       onChange={handleChange}
       value={value}
+      className={styles.select}
     >
       <option value="" disabled hidden>
         {placeholder}

@@ -3,6 +3,8 @@ import { Option, Select } from "../../shared/Select";
 import { getLocations } from "../../api";
 import { Locations } from "../../types";
 
+import styles from "./index.module.scss";
+
 export const Search = () => {
   const [locations, setLocations] = useState<Locations>({});
   const [countries, setCountries] = useState<Option[]>([]);
@@ -60,23 +62,25 @@ export const Search = () => {
   };
 
   return (
-    <form>
-      <Select
-        name="country"
-        options={countries}
-        placeholder="Choose the country"
-        handleChange={handleCountryChange}
-        value={selectedCountry}
-      />
-      <Select
-        name="city"
-        options={cities}
-        placeholder="Choose the city"
-        isDisabled={!selectedCountry}
-        handleChange={handleCityChange}
-        value={selectedCity}
-      />
-      <p>Datepicker</p>
-    </form>
+    <div className={styles.searchContainer}>
+      <div className={styles.selectContainer}>
+        <Select
+          name="country"
+          options={countries}
+          placeholder="Choose the country"
+          handleChange={handleCountryChange}
+          value={selectedCountry}
+        />
+        <Select
+          name="city"
+          options={cities}
+          placeholder="Choose the city"
+          isDisabled={!selectedCountry}
+          handleChange={handleCityChange}
+          value={selectedCity}
+        />
+      </div>
+      <div>Datepicker</div>
+    </div>
   );
 };
